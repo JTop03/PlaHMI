@@ -18,6 +18,16 @@ qt_add_qml_module(appPlaHMI
         qml/Main.qml
         qml/screens/ColorSettings.qml
         QML_FILES qml/screens/MainScreen.qml
+        QML_FILES qml/screens/SpeedSettings.qml
+        QML_FILES qml/screens/ColorOverview.qml
+        QML_FILES qml/components/StatusTabs.qml
+        QML_FILES qml/components/StartButton.qml
+        QML_FILES qml/layouts/MainScreenLayout.qml
+        QML_FILES qml/layouts/ColorOverviewLayout.qml
+        QML_FILES qml/layouts/ColorSettingsLayout.qml
+        QML_FILES qml/theme/Colors.qml
+        QML_FILES qml/theme/Fonts.qml
+        QML_FILES qml/theme/Metrics.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
