@@ -15,9 +15,13 @@ qt_add_executable(appPlaUI
 qt_add_qml_module(appPlaUI
     URI PlaUI
     QML_FILES
-        Main.qml
-        QML_FILES MainScreen.qml
-        QML_FILES ColorSettings.qml
+        qml/Main.qml
+
+        qml/Main.qml
+        qml/Screens/MainScreen.qml
+        qml/Screens/ColorSettings.qml
+        qml/Screens/ColorSettings.qml qml/Screens/MainScreen.qml
+        qml/Screens/MainScreen.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
