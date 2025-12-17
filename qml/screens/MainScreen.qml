@@ -1,34 +1,36 @@
 import QtQuick
 import QtQuick.Controls
+import QtQuick.Layouts
+import "../components"
+import "../layouts"
 Item {
     required property StackView stack
     anchors.fill: parent
 
+    MainScreenLayout {
+    anchors.fill: parent
+    activeColors: 6
+    machineStatus: "IDLE"
+    beltSpeed: 100
 
+        onColorsClicked: {
+            stack.push("ColorSettings.qml")
+        }
+        onSpeedClicked: {
+            stack.push("SpeedSettings.qml")
+        }
+    }
     Button {
         text: "Color Settings"
         onClicked: {
             stack.push("ColorSettings.qml")
         }
     }
-    Rectangle {
-        width: 110
-        height: 110
-        radius: width / 2
-        color: "#2ECC71"
 
-        Text{
-            text: "START"
-            anchors.fill: parent
-            color: "white"
-            font.pixelSize: 24
-        }
-        MouseArea {
-        anchors.fill: parents
-
-        onPressed: color = "#27ae60"
-        onReleased: color = "#2ecc71"
-        onClicked: console.log("machine started")
+    StartButton {
+        anchors.centerIn: parent
+        onClicked: {
+            console.log("machine started")
         }
     }
 }
