@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Layouts
+import QtQuick.Controls
 import "../components"
 
 Item {
@@ -11,23 +12,24 @@ Item {
     property int beltSpeed: 100
 
     signal startClicked
-    signal statusClicked
     signal speedClicked
     signal colorsClicked
 
     ColumnLayout {
         anchors.fill: parent
-        spacing: 40
-        Layout.margins: 30
+        spacing: 30
+        Layout.margins: 50
+
 
         RowLayout {
-            spacing: 20
+            spacing: 45
             Layout.alignment: Qt.AlignHCenter
+            Layout.topMargin: 50
+
 
             StatusTabs {
                 title: "Machine Status"
                 value: root.machineStatus
-                onClicked: root.statusClicked()
             }
 
             StatusTabs {
@@ -46,5 +48,12 @@ Item {
         }
         Item { Layout.fillHeight: true } // spacer
 
+        StartButton{
+
+        onClicked: root.startClicked()
+        //anchors.centerIn: parent
+        Layout.alignment: Qt.AlignCenter
+        Layout.bottomMargin: 60
+        }
     }
 }

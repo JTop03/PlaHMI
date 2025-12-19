@@ -1,18 +1,19 @@
 import QtQuick
 import QtQuick.Controls
+import "screens"
 ApplicationWindow {
-    width: 640
+    id: window
+    width: 800
     height: 480
     visible: true
 
     background: Rectangle{
-        color: "#0D0A40"
+        color: "#141240"
     }
 
     StackView{
         id: stack
         anchors.fill: parent
-
         initialItem: MainScreen{
             stack: stack
         }

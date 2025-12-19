@@ -14,23 +14,10 @@ Item {
     beltSpeed: 100
 
         onColorsClicked: {
-            stack.push("ColorSettings.qml")
+            stack.push("ColorOverview.qml")
         }
         onSpeedClicked: {
             stack.push("SpeedSettings.qml")
-        }
-    }
-    Button {
-        text: "Color Settings"
-        onClicked: {
-            stack.push("ColorSettings.qml")
-        }
-    }
-
-    StartButton {
-        anchors.centerIn: parent
-        onClicked: {
-            console.log("machine started")
         }
     }
 }

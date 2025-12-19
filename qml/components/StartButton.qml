@@ -4,10 +4,14 @@ import QtQuick.Controls
 
 Rectangle {
     id: root
-    width: 110
-    height: 110
+    width: 220
+    height: 220
     radius: width / 2
-    color: "#2ECC71"
+
+    property color startColor: "#2ECC71" // green start button
+    property color pressedColor: "#27AE60"
+
+    color: startColor
 
     signal clicked
 
@@ -15,14 +19,13 @@ Rectangle {
         text: "START"
         anchors.centerIn: parent
         color: "white"
-        font.pixelSize: 24
+        font.pixelSize: 40
         font.bold: true
     }
     MouseArea {
     anchors.fill: parent
-
-    onPressed: root.color = "#27ae60"
-    onReleased: root.color = "#2ecc71"
+    onPressed: root.color = root.pressedColor
+    onReleased: root.color = root.startColor
     onClicked: root.clicked()
     }
 }

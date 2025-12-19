@@ -3,7 +3,5 @@ import QtQuick.Controls
 
 Item {
     anchors.fill: parent
-    Button {
-        text: "Color Settings"
-    }
+
 }
