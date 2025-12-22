@@ -11,7 +11,7 @@ Rectangle{
     property color valueColor: "white"
     property color startColor: "#475059"
     property color pressedColor: "#524D4B"
-    property color textColor: "8B96A2"
+    property color textColor: "#8B96A2"
 
     color: startColor
 

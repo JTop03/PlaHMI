@@ -28,7 +28,8 @@ qt_add_qml_module(appPlaHMI
         QML_FILES qml/theme/Colors.qml
         QML_FILES qml/theme/Fonts.qml
         QML_FILES qml/theme/Metrics.qml
-        QML_FILES qml/components/ColorOverviewTabs.qml
+        QML_FILES qml/components/ColorRangeBar.qml
+        QML_FILES qml/components/ColorRangeTab.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
